@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Journey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="animated-bg" style="background-image: url('https://images.unsplash.com/photo-1516589174184-c68526674fd6?q=80&w=1600');"></div>
+    <section class="glass-container scrollable">
+        <div class="glass-card wide slide-up">
+            <h2 class="title-icon"><i class="fa-solid fa-wand-magic-sparkles"></i> Our Story</h2>
+            <form action="/submit-romance" method="POST">
+                <div class="form-group slide-in" style="animation-delay: 0.2s">
+                    <label><i class="fa-solid fa-calendar-heart"></i> When did we first meet?</label>
+                    <input type="text" name="met_date" placeholder="A day to remember..." required>
+                </div>
+                <div class="form-group slide-in" style="animation-delay: 0.4s">
+                    <label><i class="fa-solid fa-map-location-dot"></i> How did our paths cross?</label>
+                    <textarea name="met_story" placeholder="Describe that magic moment..." required></textarea>
+                </div>
+                <div class="form-group slide-in" style="animation-delay: 0.6s">
+                    <label><i class="fa-solid fa-fire-pulse"></i> What made you fall in love?</label>
+                    <textarea name="love_reason" required></textarea>
+                </div>
+                <div class="form-group slide-in" style="animation-delay: 0.8s">
+                    <label><i class="fa-solid fa-hand-holding-heart"></i> Our Love Language?</label>
+                    <select name="love_language">
+                        <option>Quality Time</option>
+                        <option>Physical Touch</option>
+                        <option>Acts of Service</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Continue <i class="fa-solid fa-arrow-right-long"></i></button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
