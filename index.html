@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You?</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <section class="glass-container">
+        <div class="glass-card fade-in">
+            <h1>Will you be my Valentine?</h1>
+            <div class="buttons">
+                <button onclick="location.href='success.html'" id="yes-btn">YES <i class="fa-solid fa-heart"></i></button>
+                <button id="no-btn">NO <i class="fa-solid fa-ghost"></i></button>
+            </div>
+        </div>
+    </section>
+    <script>
+        const noBtn = document.getElementById('no-btn');
+        const moveNo = () => {
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        };
+        noBtn.addEventListener('mouseenter', moveNo);
+        noBtn.addEventListener('touchstart', (e) => { e.preventDefault(); moveNo(); });
+    </script>
+</body>
+</html>
