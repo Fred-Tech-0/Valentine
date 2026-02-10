@@ -91,3 +91,55 @@ input, textarea, select {
     text-align: left; line-height: 2; font-size: 1.1rem;
     max-height: 400px; overflow-y: auto;
 }
+
+/* --- Success Page Specifics --- */
+
+.heart-icon-wrap {
+    font-size: 5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+/* Pulsing Heart Animation */
+.pulse-animation {
+    display: inline-block;
+    animation: heartPulse 1.5s infinite ease-in-out;
+}
+
+@keyframes heartPulse {
+    0% { transform: scale(1); filter: drop-shadow(0 0 0px rgba(255, 77, 109, 0)); }
+    50% { transform: scale(1.15); filter: drop-shadow(0 0 20px rgba(255, 77, 109, 0.6)); }
+    100% { transform: scale(1); filter: drop-shadow(0 0 0px rgba(255, 77, 109, 0)); }
+}
+
+.divider {
+    height: 2px;
+    width: 60px;
+    background: var(--primary);
+    margin: 1.5rem auto;
+    border-radius: 2px;
+}
+
+.instruction-text {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.main-cta {
+    width: 100%;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Bounce In Effect for the Card */
+.bounce-in {
+    animation: bounceIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
